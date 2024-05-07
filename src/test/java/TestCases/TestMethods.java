@@ -48,10 +48,10 @@ public class TestMethods {
 	ConfigReader configReader;
 	AmazonSearchPage amazonSearchPage;
 	HomePage homePage;
-	String browswerName="chrome"
+	//String browswerName="chrome";
 
 	
-	@BeforeClass
+@BeforeClass
 @Parameters("browserName")
 public void beforeTest(String browserName) {
     System.out.println("Browser Name :-" + browserName);
@@ -79,6 +79,7 @@ public void beforeTest(String browserName) {
     driver.manage().timeouts().implicitlyWait(Integer.valueOf(configReader.getProperty("global_wait_time")),
             TimeUnit.SECONDS);
 }
+
 
 	// Method to capture screenshot
 	private String captureScreenshot(String methodName) {
