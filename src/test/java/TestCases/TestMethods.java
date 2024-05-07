@@ -53,7 +53,7 @@ public class TestMethods {
 	
 @BeforeClass
 
-public void beforeTest( browserName) {
+public void beforeTest( ) {
     System.out.println("Browser Name :-" + browserName);
 
     // Set up ExtentReports
