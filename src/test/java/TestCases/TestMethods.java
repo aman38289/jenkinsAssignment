@@ -52,37 +52,33 @@ public class TestMethods {
 
 	
 	@BeforeClass
-	
-	public void beforeTest( browserName) {
-		
-		System.out.println("Browser Name :-" + browserName);
+@Parameters("browserName")
+public void beforeTest(String browserName) {
+    System.out.println("Browser Name :-" + browserName);
 
-		// Set up ExtentReports
-		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("extent.html");
-		extent = new ExtentReports();
-		extent.attachReporter(htmlReporter);
-		
-		if (browserName.equalsIgnoreCase("chrome")) {
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
-        } else if (browserName.equalsIgnoreCase("firefox")) {
-            WebDriverManager.firefoxdriver().setup();
-            driver = new FirefoxDriver();
-        } else if (browserName.equalsIgnoreCase("ie")) {
-            WebDriverManager.edgedriver().setup();
-            driver = new EdgeDriver();
-        } else {
-            throw new IllegalArgumentException("Invalid browser name provided: " + browserName);
-        }
-		
-		logger.info("Chrome browser launched successfully");
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Integer.valueOf(configReader.getProperty("global_wait_time")),
-				TimeUnit.SECONDS);
-		
-		
-	
-	}
+    // Set up ExtentReports
+    ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("extent.html");
+    extent = new ExtentReports();
+    extent.attachReporter(htmlReporter);
+
+    if (browserName.equalsIgnoreCase("chrome")) {
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+    } else if (browserName.equalsIgnoreCase("firefox")) {
+        WebDriverManager.firefoxdriver().setup();
+        driver = new FirefoxDriver();
+    } else if (browserName.equalsIgnoreCase("ie")) {
+        WebDriverManager.edgedriver().setup();
+        driver = new EdgeDriver();
+    } else {
+        throw new IllegalArgumentException("Invalid browser name provided: " + browserName);
+    }
+
+    logger.info("Browser launched successfully");
+    driver.manage().window().maximize();
+    driver.manage().timeouts().implicitlyWait(Integer.valueOf(configReader.getProperty("global_wait_time")),
+            TimeUnit.SECONDS);
+}
 
 	// Method to capture screenshot
 	private String captureScreenshot(String methodName) {
