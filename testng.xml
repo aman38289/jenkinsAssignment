@@ -2,8 +2,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
-	<parameter name="browserName" value="chrome"></parameter>
     <classes>
+   <parameter name="browserName" value="chrome"/>
       <class name="TestCases.TestMethods"/>
     </classes>
   </test> <!-- Test -->
