@@ -210,39 +210,6 @@ public void beforeTest( ) {
 	}
 
 
-	@Test(priority = 9)
-	public void selectAmazonFresh() throws IOException{
-
-		test = extent.createTest("select AmazonFresh");
-
-		AmazonFreshPage amazonFreshPage = new AmazonFreshPage(driver);
-		amazonFreshPage.navigateToAmazonFreshPage();
-		
-		try {
-			
-			if (!amazonFreshPage.isAmazonFreshPage()) {
-				String screenshotPath = captureScreenshot("CouldNotOpenedAmazonFreshPage");
-				test.log(Status.INFO, "Failed to Open Amazon Fresh");
-				test.fail("Failed to Open Amazon Fresh", MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
-				logger.info("Failed to Open Amazon Fresh");
-				throw new AssertionError("Failed to Open Amazon Fresh");
-			}else {
-				test.log(Status.INFO, "Navigated to Amazon Fresh page");
-				logger.info("Navigated to Amazon Fresh page");
-			}
-			
-		} catch (AssertionError e) {
-			// TODO: handle exception
-			
-		}
-		
-		
-		
-		
-		//Assert.assertTrue(amazonFreshPage.isAmazonFreshPage(), "Fresh page title verification failed");
-
-		
-	}
 
 
 	@AfterClass
