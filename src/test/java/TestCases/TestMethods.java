@@ -49,9 +49,9 @@ public class TestMethods {
 	AmazonSearchPage amazonSearchPage;
 	HomePage homePage;
 
-	@Parameters("browserName")
+	
 	@BeforeClass
-	public void beforeTest(String browserName) {
+	public void beforeTest(String browserName="chrome") {
 		
 		System.out.println("Browser Name :-" + browserName);
 
