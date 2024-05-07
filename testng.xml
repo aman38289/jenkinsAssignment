@@ -3,8 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-   <parameter name="browserName" value="chrome"/>
-      <class name="TestCases.TestMethods"/>
+         <class name="TestCases.TestMethods">
+                <parameter name="browserName" value="chrome"/>
+            </class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
