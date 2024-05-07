@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [Suite1]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="tests" name="TestonIE(failed)">
+    <parameter name="browserName" value="ie"/>
+    <classes>
+      <class name="TestCases.TestMethods">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="openGoogle"/>
+          <include name="afterTest"/>
+          <include name="searchOperation"/>
+          <include name="verifyHomepage"/>
+          <include name="selectAmazonFresh"/>
+          <include name="selectProduct"/>
+          <include name="searchProduct"/>
+        </methods>
+      </class> <!-- TestCases.TestMethods -->
+    </classes>
+  </test> <!-- TestonIE(failed) -->
+  <test thread-count="3" parallel="tests" name="TestonFireFox(failed)">
+    <parameter name="browserName" value="firefox"/>
+    <classes>
+      <class name="TestCases.TestMethods">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="openGoogle"/>
+          <include name="afterTest"/>
+          <include name="searchOperation"/>
+          <include name="verifyHomepage"/>
+          <include name="selectAmazonFresh"/>
+          <include name="selectProduct"/>
+          <include name="searchProduct"/>
+        </methods>
+      </class> <!-- TestCases.TestMethods -->
+    </classes>
+  </test> <!-- TestonFireFox(failed) -->
+  <test thread-count="3" parallel="tests" name="TestonChrome(failed)">
+    <parameter name="browserName" value="chrome"/>
+    <classes>
+      <class name="TestCases.TestMethods">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="openGoogle"/>
+          <include name="afterTest"/>
+          <include name="searchOperation"/>
+          <include name="verifyHomepage"/>
+          <include name="selectAmazonFresh"/>
+          <include name="selectProduct"/>
+          <include name="searchProduct"/>
+        </methods>
+      </class> <!-- TestCases.TestMethods -->
+    </classes>
+  </test> <!-- TestonChrome(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

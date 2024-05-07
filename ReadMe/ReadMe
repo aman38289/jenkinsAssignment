@@ -1,0 +1,49 @@
+Overview:
+	This project demonstrates a Test Automation Framework for web application testing using TestNG and 
+	Selenium WebDriver. It includes various test cases to validate functionalities of a web application(Amazon Ecommerce-Site).
+
+Pre-requisites:
+
+Java Development Kit (JDK)
+	Eclipse IDE (or any preferred Java IDE)
+	Selenium WebDriver library
+	TestNG library
+	WebDriver executable files (Chrome, Firefox, Internet Explorer)
+Setup Instructions:
+
+	Install JDK and set up environment variables.
+	Install Eclipse IDE and configure it.
+	Download Selenium WebDriver and TestNG libraries.
+	Import the project into Eclipse IDE.
+	Ensure WebDriver executable files are placed in the specified directory paths.
+	Configure the config.properties file with appropriate URLs and other configurations.
+Project Structure:
+
+	src/Tests/TestMethods.java: Contains test methods implemented using TestNG annotations.
+	config/ConfigReader.java: Reads configurations from config.properties file.
+	pages/: Contains Page Object classes for different web pages.
+	screenshots/: Stores screenshots captured during test execution.
+	extent.html: ExtentReports HTML report file.
+Test Cases:
+	
+	googleOpenOperation : - to search google on driver.
+	searchOperation: Searches for a website using Google search.
+	verifyHomepage: Verifies the title of the homepage of amazon website.
+	signInClick: Clicks on the "Sign In" link on the homepage.
+	signIn: Logs into the website and verifies successful login.
+	searchProduct: Searches for a product on the website.
+	selectProduct: Selects a product from the search results.
+	selectMiniTV: Navigates to the MiniTV page and verifies its title.
+	selectSell: Navigates to the Sell page and verifies its title.
+	selectAmazonFresh: Navigates to the Amazon Fresh page and verifies its title.
+	selectFruitsAndVegitables: Selects "Fruits and Vegetables" from the Amazon Fresh page.
+	selectCustomerServicePage: Navigates to the Customer Service page and verifies its title.
+	failureTestOnElement: Tests failure scenario by validating an incorrect element.
+Reporting:
+
+	ExtentReports is used for reporting test results.
+	HTML report (extent.html) is generated after test execution.
+Execution:
+
+	open testng.xml file and right click on that file , run as testng suite.
+	After execution, view the test results in the ExtentReports HTML report.

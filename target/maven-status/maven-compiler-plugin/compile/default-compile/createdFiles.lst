@@ -1,0 +1,5 @@
+PageObjectModel\HomePage.class
+PageObjectModel\AmazonSearchPage.class
+PageObjectModel\AmazonFreshPage.class
+PageObjectModel\LoginPage.class
+Configuration\ConfigReader.class

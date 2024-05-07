@@ -1,0 +1,15 @@
+<test name="TestonIE">
+  <parameter name = "browserName" value="ie"></parameter>
+    <classes>
+      <class name="Tests.TestMethods"/>
+    </classes>
+  </test>
+  
+  <test name="TestonFireFox">
+  <parameter name = "browserName" value="firefox"></parameter>
+    <classes>
+      <class name="Tests.TestMethods"/>
+    </classes>
+  </test>
+  
+  < ------------ parallel = "tests" thread-count="3" --------->
