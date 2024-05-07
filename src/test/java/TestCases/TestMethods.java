@@ -48,12 +48,12 @@ public class TestMethods {
 	ConfigReader configReader;
 	AmazonSearchPage amazonSearchPage;
 	HomePage homePage;
-	//String browswerName="chrome";
+	String browswerName="chrome";
 
 	
 @BeforeClass
-@Parameters("browserName")
-public void beforeTest(String browserName) {
+
+public void beforeTest( browserName) {
     System.out.println("Browser Name :-" + browserName);
 
     // Set up ExtentReports
