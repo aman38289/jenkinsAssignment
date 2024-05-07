@@ -49,7 +49,7 @@ public class TestMethods {
 	AmazonSearchPage amazonSearchPage;
 	HomePage homePage;
 
-	@Parameters("browserName")
+	//@Parameters("browserName")
 	@BeforeClass
 	public void beforeTest(String browserName) {
 		
