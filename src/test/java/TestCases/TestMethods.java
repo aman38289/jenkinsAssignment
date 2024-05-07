@@ -48,10 +48,12 @@ public class TestMethods {
 	ConfigReader configReader;
 	AmazonSearchPage amazonSearchPage;
 	HomePage homePage;
+	String browswerName="chrome"
 
 	
 	@BeforeClass
-	public void beforeTest(String browserName="chrome") {
+	
+	public void beforeTest( browserName) {
 		
 		System.out.println("Browser Name :-" + browserName);
 
