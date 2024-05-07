@@ -48,7 +48,7 @@ public class TestMethods {
 	ConfigReader configReader;
 	AmazonSearchPage amazonSearchPage;
 	HomePage homePage;
-	String browswerName="chrome";
+	String browserName="chrome";
 
 	
 @BeforeClass
